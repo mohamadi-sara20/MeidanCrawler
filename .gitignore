@@ -1,4 +1,4 @@
-/output/
-/shargh/
-/etemad/
-.DS_Store
+*/output/*
+*/shargh/*
+*/etemad/*
+*.DS_Store
