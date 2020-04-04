@@ -66,7 +66,7 @@ def get_data_files_path(dirpath):
 
 if __name__ == "__main__":
 	
-	data_dirpaths = ['shargh_data', 'iran_data', 'donya_eghtesad_data', 'etemad_data']
+	data_dirpaths = ['shargh_data', 'etemad_data']
 
 	for directory in data_dirpaths:
 		filenames = get_data_files_path(directory)
@@ -75,6 +75,8 @@ if __name__ == "__main__":
 			print('!!!!!!!')
 			print(f)
 			print('!!!!!!')
+			if f.startswith('.'):
+				continue
 			year = f.split('.')[0][-2:]
 			sleep(10)
 			issue_links = get_issue_link(directory + '/' + f)
